@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!validate()) return;
 
@@ -185,13 +185,35 @@ document.addEventListener('DOMContentLoaded', () => {
         if (span) span.textContent = 'Enviando...';
       }
 
-      setTimeout(() => {
-        contactForm.style.display = 'none';
-        if (formSuccess) {
-          formSuccess.classList.add('show');
-          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      try {
+        const response = await fetch('https://formspree.io/f/xaqvkoon', {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          if (formSuccess) {
+            formSuccess.classList.add('show');
+            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+          if (btn) {
+            btn.disabled = false;
+            const span = btn.querySelector('span');
+            if (span) span.textContent = 'Enviar mensagem';
+          }
         }
-      }, 1400);
+      } catch (err) {
+        alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+        if (btn) {
+          btn.disabled = false;
+          const span = btn.querySelector('span');
+          if (span) span.textContent = 'Enviar mensagem';
+        }
+      }
     });
   }
 
