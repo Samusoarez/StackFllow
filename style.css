@@ -699,7 +699,7 @@ p { color: var(--gray-400); line-height: 1.7; }
 /* ── SERVICES ────────────────────────────────────────── */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
