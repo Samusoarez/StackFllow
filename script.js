@@ -265,4 +265,107 @@ document.addEventListener('DOMContentLoaded', () => {
     barObserver.observe(el);
   });
 
+  // ── SCROLL PROGRESS BAR ────────────────────────────────
+  const scrollProgress = document.getElementById('scrollProgress');
+  if (scrollProgress) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total    = document.body.scrollHeight - window.innerHeight;
+      scrollProgress.style.width = total > 0 ? `${(scrolled / total) * 100}%` : '0%';
+    }, { passive: true });
+  }
+
+  // ── TYPEWRITER ANIMATION ───────────────────────────────
+  const typewriterEl = document.getElementById('typewriter');
+  if (typewriterEl) {
+    const phrases = [
+      'Tecnologia que converte.',
+      'Resultados que aparecem.',
+      'Campanhas que vendem.',
+      'Estratégia que funciona.',
+      'Dados que transformam.'
+    ];
+    let phraseIdx = 0;
+    let charIdx   = 0;
+    let deleting  = false;
+    let paused    = false;
+
+    const type = () => {
+      if (paused) return;
+      const phrase = phrases[phraseIdx];
+
+      if (!deleting) {
+        typewriterEl.textContent = phrase.slice(0, ++charIdx);
+        if (charIdx === phrase.length) {
+          deleting = true;
+          paused   = true;
+          setTimeout(() => { paused = false; setTimeout(type, 60); }, 2200);
+          return;
+        }
+        setTimeout(type, 75);
+      } else {
+        typewriterEl.textContent = phrase.slice(0, --charIdx);
+        if (charIdx === 0) {
+          deleting  = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          setTimeout(type, 420);
+          return;
+        }
+        setTimeout(type, 40);
+      }
+    };
+
+    // Start after hero reveal animation
+    setTimeout(type, 1400);
+  }
+
+  // ── CARD TILT EFFECT ───────────────────────────────────
+  if (!prefersReducedMotion && window.innerWidth >= 768) {
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        card.style.transform =
+          `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 8}deg) translateY(-5px) scale(1.01)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  }
+
+  // ── LIVE DASHBOARD METRICS ─────────────────────────────
+  const liveLeads = document.getElementById('liveLeads');
+  const liveConv  = document.getElementById('liveConv');
+  const liveCpl   = document.getElementById('liveCpl');
+
+  if (liveLeads && liveConv && liveCpl) {
+    const popEl = el => {
+      el.classList.remove('pop');
+      void el.offsetWidth;
+      el.classList.add('pop');
+    };
+
+    const leadsPool = [2847, 2851, 2858, 2862, 2869, 2874];
+    const convPool  = ['4.7%', '4.8%', '4.7%', '4.9%', '4.8%'];
+    const cplPool   = ['R$12', 'R$11', 'R$12', 'R$11', 'R$10'];
+    let tick = 0;
+
+    setInterval(() => {
+      tick = (tick + 1) % leadsPool.length;
+      const idx = Math.floor(Math.random() * 3);
+      if (idx === 0) {
+        liveLeads.textContent = leadsPool[tick].toLocaleString('pt-BR');
+        popEl(liveLeads);
+      } else if (idx === 1) {
+        liveConv.textContent = convPool[tick];
+        popEl(liveConv);
+      } else {
+        liveCpl.textContent = cplPool[tick];
+        popEl(liveCpl);
+      }
+    }, 3800);
+  }
+
 });

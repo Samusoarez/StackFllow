@@ -12,7 +12,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://stackfllow.com.br/" />
 
-  <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="StackFllow" />
   <meta property="og:title" content="StackFllow | Agência de Performance Digital" />
@@ -47,9 +47,7 @@
           "contactType": "customer service",
           "availableLanguage": "Portuguese"
         },
-        "sameAs": [
-          "https://wa.me/5516994068079"
-        ]
+        "sameAs": ["https://wa.me/5516994068079"]
       },
       {
         "@type": "WebSite",
@@ -79,6 +77,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
@@ -125,12 +126,13 @@
       <div class="hero__inner">
         <div class="hero__content">
           <div class="hero__badge reveal">
+            <span class="label"><i class="fa-solid fa-bolt"></i> Agência de Performance Digital</span>
           </div>
           <h1 class="hero__title reveal reveal--delay-1">
-            Performance que escala.<br/><em>Tecnologia que converte.</em>
+            Performance que escala.<br/><em id="typewriter" class="hero__typewriter">Tecnologia que converte.</em>
           </h1>
           <p class="hero__sub reveal reveal--delay-2">
-            Combinamos estratégia de tráfego pago, desenvolvimento web de alta performance e automações inteligentes para transformar cliques em receita.
+            Combinamos estratégia de tráfego pago, desenvolvimento web de alta performance e automações inteligentes para transformar cliques em receita real e mensurável.
           </p>
           <div class="hero__actions reveal reveal--delay-3">
             <a href="/contato" class="btn btn--primary btn--lg">
@@ -148,15 +150,15 @@
             </div>
             <div class="hero__stat">
               <div class="hero__stat-num">R$1M<span style="color:var(--orange-xl)">+</span></div>
-              <div class="hero__stat-label">em ads gerenciados</div>
+              <div class="hero__stat-label">Em ads gerenciados</div>
             </div>
             <div class="hero__stat">
               <div class="hero__stat-num">98<span style="color:var(--orange-xl)">%</span></div>
-              <div class="hero__stat-label">Clientes satisfeitos</div>
+              <div class="hero__stat-label">Satisfação dos clientes</div>
             </div>
             <div class="hero__stat">
               <div class="hero__stat-num">3<span style="color:var(--orange-xl)">x</span></div>
-              <div class="hero__stat-label">Mais retorno em ads</div>
+              <div class="hero__stat-label">Retorno médio em ads</div>
             </div>
           </div>
         </div>
@@ -179,22 +181,22 @@
               <div class="dash__metrics">
                 <div class="dash__metric">
                   <div class="dash__metric-label">Novos leads</div>
-                  <div class="dash__metric-value">2.847</div>
+                  <div class="dash__metric-value" id="liveLeads">2.847</div>
                   <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +34% este mês</div>
                 </div>
                 <div class="dash__metric">
                   <div class="dash__metric-label">Conversão</div>
-                  <div class="dash__metric-value">4.7%</div>
+                  <div class="dash__metric-value" id="liveConv">4.7%</div>
                   <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +1.2pp</div>
                 </div>
                 <div class="dash__metric">
                   <div class="dash__metric-label">Custo / lead</div>
-                  <div class="dash__metric-value">R$12</div>
+                  <div class="dash__metric-value" id="liveCpl">R$12</div>
                   <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-down"></i> −28%</div>
                 </div>
                 <div class="dash__metric">
                   <div class="dash__metric-label">PageSpeed</div>
-                  <div class="dash__metric-value">98</div>
+                  <div class="dash__metric-value" id="livePs">98</div>
                   <div class="dash__metric-delta up"><i class="fa-solid fa-circle-check"></i> Excelente</div>
                 </div>
               </div>
@@ -229,27 +231,32 @@
     <div class="container">
       <div class="section__head reveal">
         <h2>Do diagnóstico ao<br/><em>resultado em 4 etapas</em></h2>
+        <p>Um processo transparente, orientado a dados, sem enrolação.</p>
       </div>
       <div class="process__grid">
         <div class="process__item reveal">
+          <i class="fa-solid fa-magnifying-glass-chart process__icon"></i>
           <div class="process__num">01</div>
           <h3 class="process__title">Diagnóstico</h3>
-          <p class="process__desc">Analisamos seu negócio, concorrência e oportunidades para construir a estratégia ideal.</p>
+          <p class="process__desc">Analisamos seu negócio, concorrência e oportunidades para construir a estratégia mais eficiente para o seu mercado.</p>
         </div>
         <div class="process__item reveal reveal--delay-1">
+          <i class="fa-solid fa-chess process__icon"></i>
           <div class="process__num">02</div>
           <h3 class="process__title">Estratégia</h3>
-          <p class="process__desc">Definimos canais, metas e KPIs realistas com base em dados do seu mercado.</p>
+          <p class="process__desc">Definimos canais, metas e KPIs realistas com base em dados reais do seu segmento, sem achismos.</p>
         </div>
         <div class="process__item reveal reveal--delay-2">
+          <i class="fa-solid fa-rocket process__icon"></i>
           <div class="process__num">03</div>
           <h3 class="process__title">Execução</h3>
-          <p class="process__desc">Colocamos a máquina de crescimento para rodar: anúncios, landing pages e automações.</p>
+          <p class="process__desc">Colocamos a máquina de crescimento para rodar: anúncios, landing pages de alta conversão e automações inteligentes.</p>
         </div>
         <div class="process__item reveal reveal--delay-3">
+          <i class="fa-solid fa-chart-line process__icon"></i>
           <div class="process__num">04</div>
           <h3 class="process__title">Otimização</h3>
-          <p class="process__desc">Monitoramos em tempo real e otimizamos continuamente para maximizar o ROI.</p>
+          <p class="process__desc">Monitoramos em tempo real e otimizamos continuamente para maximizar o ROI e reduzir o custo por resultado.</p>
         </div>
       </div>
     </div>
@@ -261,37 +268,103 @@
   <section class="services section" style="background: rgba(13,16,24,.6); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div class="section__head reveal">
+        <span class="label"><i class="fa-solid fa-layer-group"></i> O que fazemos</span>
         <h2>Serviços que<br/><em>geram resultado</em></h2>
-        <p>Cada serviço foi desenvolvido para atacar um ponto específico da jornada de crescimento do seu negócio.</p>
+        <p>Cada serviço foi desenvolvido para atacar um ponto específico da jornada de crescimento do seu negócio, do clique à conversão.</p>
       </div>
 
       <div class="services__grid">
-        <div class="service-card reveal">
+        <div class="service-card reveal" data-tilt>
           <div class="service-card__icon"><i class="fa-brands fa-meta"></i></div>
           <h3 class="service-card__title">Tráfego Pago</h3>
-          <p class="service-card__desc">Campanhas de alta performance em qualquer plataforma de mídia paga. Escale suas vendas com previsibilidade e estratégia multicanal.</p>
+          <p class="service-card__desc">Campanhas de alta performance no Meta Ads, Google Ads, TikTok Ads e LinkedIn. Escale suas vendas com previsibilidade total e estratégia multicanal.</p>
           <a href="/servicos" class="service-card__link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="service-card reveal reveal--delay-1">
+        <div class="service-card reveal reveal--delay-1" data-tilt>
           <div class="service-card__icon"><i class="fa-solid fa-code"></i></div>
           <h3 class="service-card__title">Desenvolvimento Web</h3>
-          <p class="service-card__desc">Sites e landing pages com foco em conversão, velocidade e SEO. Performance acima de 95 no PageSpeed.</p>
+          <p class="service-card__desc">Sites e landing pages com foco em conversão, velocidade e SEO técnico. Performance acima de 95 no PageSpeed. Entrega em até 72 horas.</p>
           <a href="/servicos" class="service-card__link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="service-card reveal reveal--delay-2">
+        <div class="service-card reveal reveal--delay-2" data-tilt>
           <div class="service-card__icon"><i class="fa-solid fa-cart-shopping"></i></div>
           <h3 class="service-card__title">Lojas Virtuais</h3>
-          <p class="service-card__desc">E-commerces completos em Shopify e WooCommerce, integrados com meios de pagamento e logística.</p>
+          <p class="service-card__desc">E-commerces completos em Shopify e WooCommerce, integrados com meios de pagamento, logística e estratégia de tráfego desde o primeiro dia.</p>
           <a href="/servicos" class="service-card__link">Saiba mais <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-<div class="service-card service-card--cta reveal reveal--delay-2">
+        <div class="service-card service-card--cta reveal reveal--delay-3">
           <div class="service-card__icon"><i class="fa-solid fa-rocket"></i></div>
           <h3>Pronto para escalar?</h3>
-          <p>Fale com nosso time e descubra qual estratégia faz sentido para o seu negócio.</p>
+          <p>Fale com nosso time e descubra qual estratégia faz sentido para o seu negócio. Diagnóstico gratuito.</p>
           <a href="/contato" class="btn btn--ghost">Começar agora <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       TECNOLOGIAS
+  ════════════════════════════════════ -->
+  <section class="techs section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="label"><i class="fa-solid fa-microchip"></i> Stack</span>
+        <h2>Plataformas que <em>dominamos</em></h2>
+        <p>Trabalhamos com as melhores ferramentas do mercado para entregar resultados consistentes e escaláveis.</p>
+      </div>
+      <div class="techs__grid reveal">
+        <div class="tech-item">
+          <i class="fa-brands fa-meta tech-item__icon"></i>
+          <span class="tech-item__name">Meta Ads</span>
+          <span class="tech-item__tag">Facebook · Instagram</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-brands fa-google tech-item__icon"></i>
+          <span class="tech-item__name">Google Ads</span>
+          <span class="tech-item__tag">Search · Display · Shopping</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-brands fa-tiktok tech-item__icon"></i>
+          <span class="tech-item__name">TikTok Ads</span>
+          <span class="tech-item__tag">Performance · Brand</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-solid fa-store tech-item__icon"></i>
+          <span class="tech-item__name">Shopify</span>
+          <span class="tech-item__tag">E-commerce</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-brands fa-wordpress tech-item__icon"></i>
+          <span class="tech-item__name">WordPress</span>
+          <span class="tech-item__tag">Sites · Landing Pages</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-solid fa-chart-pie tech-item__icon"></i>
+          <span class="tech-item__name">GA4 Analytics</span>
+          <span class="tech-item__tag">Dados · Relatórios</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-brands fa-linkedin tech-item__icon"></i>
+          <span class="tech-item__name">LinkedIn Ads</span>
+          <span class="tech-item__tag">B2B · Leads qualificados</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-solid fa-envelope-open-text tech-item__icon"></i>
+          <span class="tech-item__name">E-mail Marketing</span>
+          <span class="tech-item__tag">Automação · Nurturing</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-solid fa-users-gear tech-item__icon"></i>
+          <span class="tech-item__name">CRM & Automação</span>
+          <span class="tech-item__tag">HubSpot · ActiveCampaign</span>
+        </div>
+        <div class="tech-item">
+          <i class="fa-solid fa-fire tech-item__icon"></i>
+          <span class="tech-item__name">CRO & Heatmap</span>
+          <span class="tech-item__tag">Hotjar · Otimização</span>
         </div>
       </div>
     </div>
@@ -304,29 +377,37 @@
     <div class="container">
       <div class="diff__inner">
         <div>
+          <span class="label reveal"><i class="fa-solid fa-star"></i> Por que a StackFllow</span>
           <h2 class="diff__title reveal reveal--delay-1">Dados reais.<br/><em>Resultados mensuráveis.</em></h2>
-          <p class="diff__sub reveal reveal--delay-2">Não vendemos promessas. Entregamos relatórios detalhados, análises estratégicas e resultados concretos que você acompanha de perto.</p>
+          <p class="diff__sub reveal reveal--delay-2">Não vendemos promessas. Entregamos relatórios detalhados, análises estratégicas e resultados concretos que você acompanha de perto, toda semana.</p>
 
           <div class="diff__list reveal reveal--delay-2">
             <div class="diff__item">
               <div class="diff__item-icon"><i class="fa-solid fa-gauge-high"></i></div>
               <div>
                 <div class="diff__item-title">Velocidade de execução</div>
-                <div class="diff__item-desc">Campanhas e páginas no ar em 72 horas após a aprovação da estratégia.</div>
+                <div class="diff__item-desc">Campanhas e páginas no ar em até 72 horas após a aprovação da estratégia, sem burocracia.</div>
               </div>
             </div>
             <div class="diff__item">
               <div class="diff__item-icon"><i class="fa-solid fa-chart-line"></i></div>
               <div>
                 <div class="diff__item-title">Relatórios semanais</div>
-                <div class="diff__item-desc">Acompanhe cada centavo investido com transparência total.</div>
+                <div class="diff__item-desc">Acompanhe cada centavo investido com transparência total — CPL, ROAS, taxa de conversão e muito mais.</div>
               </div>
             </div>
             <div class="diff__item">
               <div class="diff__item-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
               <div>
                 <div class="diff__item-title">Stack integrado</div>
-                <div class="diff__item-desc">Tráfego, site e automação funcionando juntos para maximizar conversões.</div>
+                <div class="diff__item-desc">Tráfego, site e automação funcionando em sinergia para multiplicar conversões em todos os canais.</div>
+              </div>
+            </div>
+            <div class="diff__item">
+              <div class="diff__item-icon"><i class="fa-solid fa-headset"></i></div>
+              <div>
+                <div class="diff__item-title">Atendimento direto</div>
+                <div class="diff__item-desc">Você fala direto com quem executa. Sem intermediários, sem demoras. Resposta em até 4 horas úteis.</div>
               </div>
             </div>
           </div>
@@ -387,17 +468,19 @@
   <section class="testimonials section" style="background: rgba(13,16,24,.5); border-top: 1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div class="section__head reveal">
+        <span class="label"><i class="fa-solid fa-quote-left"></i> Depoimentos</span>
         <h2>O que nossos clientes<br/><em>dizem sobre os resultados</em></h2>
+        <p>Histórias reais de negócios que escalaram com a StackFllow.</p>
       </div>
 
       <div class="testimonials__grid">
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card reveal" data-tilt>
           <div class="testimonial-card__stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonial-card__text">"Em 60 dias de parceria, nossa taxa de conversão triplicou. Os relatórios semanais mudaram a forma como tomamos decisões."</p>
+          <p class="testimonial-card__text">"Em 60 dias de parceria, nossa taxa de conversão triplicou. Os relatórios semanais mudaram a forma como tomamos decisões no negócio."</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">VM</div>
             <div>
@@ -407,13 +490,13 @@
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal--delay-1">
+        <div class="testimonial-card reveal reveal--delay-1" data-tilt>
           <div class="testimonial-card__stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonial-card__text">"Contratei para tráfego pago e acabei migrando tudo: site, automações e CRM. Vale cada centavo. Resultado visível na primeira semana."</p>
+          <p class="testimonial-card__text">"Contratei para tráfego pago e acabei migrando tudo: site, automações e CRM. Vale cada centavo. Resultado visível na primeira semana de campanha."</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">JS</div>
             <div>
@@ -423,13 +506,13 @@
           </div>
         </div>
 
-        <div class="testimonial-card reveal reveal--delay-2">
+        <div class="testimonial-card reveal reveal--delay-2" data-tilt>
           <div class="testimonial-card__stars">
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <p class="testimonial-card__text">"Nossa loja online saiu do zero para R$180 mil de faturamento em 90 dias. A StackFllow entregou um ecossistema digital completo."</p>
+          <p class="testimonial-card__text">"Nossa loja online saiu do zero para R$180 mil de faturamento em 90 dias. A StackFllow entregou um ecossistema digital completo e funcional."</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">RT</div>
             <div>
@@ -443,8 +526,68 @@
   </section>
 
   <!-- ════════════════════════════════════
-       CLIENTES MARQUEE
+       CASES DE SUCESSO
   ════════════════════════════════════ -->
+  <section class="cases section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="label"><i class="fa-solid fa-trophy"></i> Cases</span>
+        <h2>Resultados que <em>falam por si</em></h2>
+        <p>Números reais de clientes reais. Estratégias que funcionam de verdade.</p>
+      </div>
+      <div class="cases__grid">
+
+        <div class="case-card reveal">
+          <span class="case-card__tag"><i class="fa-solid fa-shirt"></i> E-commerce · Moda</span>
+          <h3 class="case-card__title">Loja de moda com ROI negativo</h3>
+          <p class="case-card__desc">Campanhas com ROAS abaixo de 1.5×, custo por lead alto e zero segmentação de audiência. Reformulamos toda a estrutura de campanhas Meta + Google em 30 dias.</p>
+          <div class="case-card__metrics">
+            <div class="case-metric">
+              <div class="case-metric__value">8.4×</div>
+              <div class="case-metric__label">ROAS alcançado</div>
+            </div>
+            <div class="case-metric">
+              <div class="case-metric__value">+340%</div>
+              <div class="case-metric__label">Crescimento em vendas</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card reveal reveal--delay-1">
+          <span class="case-card__tag"><i class="fa-solid fa-heart-pulse"></i> Saúde · Estética</span>
+          <h3 class="case-card__title">Clínica com site lento e sem leads</h3>
+          <p class="case-card__desc">Site com PageSpeed 42, formulários quebrados e campanhas sem tracking correto. Desenvolvemos landing page + integração completa de analytics e automação de leads.</p>
+          <div class="case-card__metrics">
+            <div class="case-metric">
+              <div class="case-metric__value">−32%</div>
+              <div class="case-metric__label">Redução no CPL</div>
+            </div>
+            <div class="case-metric">
+              <div class="case-metric__value">+220%</div>
+              <div class="case-metric__label">Leads mensais</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card reveal reveal--delay-2">
+          <span class="case-card__tag"><i class="fa-solid fa-boxes-stacking"></i> B2B · Atacado</span>
+          <h3 class="case-card__title">Distribuidora do zero ao digital</h3>
+          <p class="case-card__desc">Empresa sem presença digital, vendendo apenas por telefone. Criamos e-commerce completo no Shopify, integrado com tráfego pago e automação de pedidos.</p>
+          <div class="case-card__metrics">
+            <div class="case-metric">
+              <div class="case-metric__value">R$180k</div>
+              <div class="case-metric__label">Faturamento em 90 dias</div>
+            </div>
+            <div class="case-metric">
+              <div class="case-metric__value">98</div>
+              <div class="case-metric__label">PageSpeed Score</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ════════════════════════════════════
        NÚMEROS
@@ -453,28 +596,32 @@
     <div class="container">
       <div class="numbers__grid">
         <div class="numbers__item reveal">
+          <i class="fa-solid fa-folder-open numbers__icon"></i>
           <div class="numbers__value">
             <span data-count="80">0</span><span class="numbers__suffix">+</span>
           </div>
           <div class="numbers__label">Projetos entregues com sucesso</div>
         </div>
         <div class="numbers__item reveal reveal--delay-1">
+          <i class="fa-solid fa-dollar-sign numbers__icon"></i>
           <div class="numbers__value">
             R$<span data-count="1">0</span><span class="numbers__suffix">M+</span>
           </div>
           <div class="numbers__label">Em investimento em ads gerenciados</div>
         </div>
         <div class="numbers__item reveal reveal--delay-2">
+          <i class="fa-solid fa-face-smile numbers__icon"></i>
           <div class="numbers__value">
             <span data-count="98">0</span><span class="numbers__suffix">%</span>
           </div>
           <div class="numbers__label">De satisfação dos clientes ativos</div>
         </div>
         <div class="numbers__item reveal reveal--delay-3">
+          <i class="fa-solid fa-arrow-trend-up numbers__icon"></i>
           <div class="numbers__value">
             <span data-count="3">0</span><span class="numbers__suffix">x</span>
           </div>
-          <div class="numbers__label">Mais retorno médio em ads</div>
+          <div class="numbers__label">Mais retorno médio em ads vs. média do mercado</div>
         </div>
       </div>
     </div>
@@ -486,11 +633,12 @@
   <section class="cta-final section">
     <div class="container">
       <div class="cta-final__inner">
+        <span class="label reveal"><i class="fa-solid fa-calendar-check"></i> Diagnóstico gratuito</span>
         <h2 class="cta-final__title reveal reveal--delay-1">
           Seu próximo projeto merece<br/><em>performance de verdade</em>
         </h2>
         <p class="cta-final__sub reveal reveal--delay-2">
-          Agende um diagnóstico gratuito e descubra como a StackFllow pode escalar os seus resultados. Sem compromisso.
+          Agende um diagnóstico gratuito e descubra como a StackFllow pode escalar seus resultados. Analisamos seu cenário atual, identificamos oportunidades e apresentamos uma proposta personalizada. Sem compromisso.
         </p>
         <div class="cta-final__actions reveal reveal--delay-3">
           <a href="/contato" class="btn btn--primary btn--lg">
@@ -512,7 +660,7 @@
       <div class="footer__top">
         <div class="footer__brand">
           <a href="/" class="nav__logo">
-        <img src="Logo transparente -Photoroom.png" class="logo-icon" alt="StackFllow" aria-hidden="true" />
+            <img src="Logo transparente -Photoroom.png" class="logo-icon" alt="StackFllow" aria-hidden="true" />
             <span class="logo-stack">Stack</span><span class="logo-flow">Fllow</span>
           </a>
           <p>Performance que escala.<br/>Tecnologia que converte.</p>
@@ -543,10 +691,14 @@
             <i class="fa-solid fa-phone"></i>
             +55 16 99406-8079
           </a>
+          <a href="https://wa.me/5516994068079" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+          </a>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2024 StackFllow Agência Digital. Todos os direitos reservados.</p>
+        <p>© 2025 StackFllow Agência Digital. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
