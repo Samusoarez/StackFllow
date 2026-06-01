@@ -1243,7 +1243,7 @@ p { color: var(--gray-400); line-height: 1.7; }
 }
 .footer__bottom p {
   font-size: .8rem;
-  color: var(--white);
+  color: var(--gray-400);
 }
 
 /* ── PAGE HERO (inner pages) ─────────────────────────── */
