@@ -264,6 +264,7 @@ p { color: var(--gray-400); line-height: 1.7; }
   transform: scale(1.08);
   opacity: .9;
 }
+.logo-name  { display: flex; align-items: center; gap: 0; }
 .logo-stack { color: var(--off-white); }
 .logo-flow  { color: var(--orange-xl); }
 
