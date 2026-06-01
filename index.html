@@ -114,112 +114,152 @@
   </div>
 
   <!-- ════════════════════════════════════
-       HERO
+       HERO V2 — BizNext Style
   ════════════════════════════════════ -->
-  <section class="hero">
+  <section class="hero hero-v2">
     <div class="hero__bg">
       <div class="hero__grid"></div>
       <div class="hero__orb hero__orb--1"></div>
       <div class="hero__orb hero__orb--2"></div>
     </div>
+
     <div class="container">
-      <div class="hero__inner">
-        <div class="hero__content">
-          <div class="hero__badge reveal">
-            <span class="label"><i class="fa-solid fa-bolt"></i> Agência de Performance Digital</span>
+      <div class="hero-v2__inner">
+
+        <!-- Eyebrow -->
+        <div class="hero-v2__eyebrow reveal">
+          <span class="eyebrow__line"></span>
+          <em>Agência de Performance Digital</em>
+          <span class="eyebrow__line"></span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="hero-v2__title reveal reveal--delay-1">
+          Performance Digital<br/>
+          que <span class="text-gradient hero__typewriter" id="typewriter">Escala de Verdade.</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="hero-v2__sub reveal reveal--delay-2">
+          Combinamos tráfego pago, desenvolvimento web e automação para transformar seu investimento em receita real e mensurável.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-v2__actions reveal reveal--delay-3">
+          <a href="/contato" class="btn btn--primary btn--lg">
+            Diagnóstico Grátis <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="/servicos" class="btn btn--ghost btn--lg">Ver serviços</a>
+        </div>
+
+        <!-- Device Mockup -->
+        <div class="hero-v2__device reveal reveal--delay-3">
+          <div class="device__glow"></div>
+          <div class="device__frame">
+            <div class="device__topbar">
+              <div class="device__dot" style="background:#f74603"></div>
+              <div class="device__dot" style="background:#dd0200"></div>
+              <div class="device__dot" style="background:#55100d"></div>
+              <div class="device__url">stackfllow.com.br — Performance Dashboard</div>
+            </div>
+            <div class="device__content">
+              <div class="device__metric">
+                <span class="device__m-label">Novos Leads</span>
+                <span class="device__m-value" id="liveLeads">2.847</span>
+                <span class="device__m-delta">↑ +34% este mês</span>
+              </div>
+              <div class="device__metric">
+                <span class="device__m-label">Conversão</span>
+                <span class="device__m-value" id="liveConv">4.7%</span>
+                <span class="device__m-delta">↑ +1.2pp</span>
+              </div>
+              <div class="device__metric">
+                <span class="device__m-label">Custo / Lead</span>
+                <span class="device__m-value" id="liveCpl">R$11</span>
+                <span class="device__m-delta">↓ −32%</span>
+              </div>
+              <div class="device__metric">
+                <span class="device__m-label">PageSpeed</span>
+                <span class="device__m-value">98</span>
+                <span class="device__m-delta">✓ Excelente</span>
+              </div>
+              <div class="device__chart">
+                <div class="device__chart-bars">
+                  <div style="height:30%"></div>
+                  <div style="height:48%"></div>
+                  <div style="height:40%"></div>
+                  <div style="height:65%"></div>
+                  <div style="height:56%"></div>
+                  <div style="height:78%"></div>
+                  <div class="active" style="height:92%"></div>
+                </div>
+                <div class="device__chart-label">Receita gerada · Últimos 7 meses</div>
+              </div>
+            </div>
+            <div class="device__bar-row">
+              <span class="device__bar-lbl">Meta mensal</span>
+              <span class="device__bar-pct">84%</span>
+              <div class="device__prog">
+                <div class="dash__bar-fill" data-width="84" style="width:0"></div>
+              </div>
+            </div>
           </div>
-          <h1 class="hero__title reveal reveal--delay-1">
-            Performance que escala.<br/><em id="typewriter" class="hero__typewriter">Tecnologia que converte.</em>
-          </h1>
-          <p class="hero__sub reveal reveal--delay-2">
-            Combinamos estratégia de tráfego pago, desenvolvimento web de alta performance e automações inteligentes para transformar cliques em receita real e mensurável.
-          </p>
-          <div class="hero__actions reveal reveal--delay-3">
-            <a href="/contato" class="btn btn--primary btn--lg">
-              Quero resultados agora
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="/servicos" class="btn btn--ghost btn--lg">
-              Ver serviços
-            </a>
+          <div class="device__base"></div>
+          <div class="device__stand"></div>
+        </div>
+
+        <!-- Feature Cards -->
+        <div class="hero-v2__features reveal">
+          <div class="hfeat-card">
+            <i class="fa-brands fa-meta hfeat-card__icon"></i>
+            <div class="hfeat-card__name">Tráfego Pago</div>
+            <div class="hfeat-card__dots"><span></span><span></span><span></span></div>
           </div>
-          <div class="hero__stats reveal reveal--delay-4">
-            <div class="hero__stat">
-              <div class="hero__stat-num">80<span style="color:var(--orange-xl)">+</span></div>
-              <div class="hero__stat-label">Projetos entregues</div>
-            </div>
-            <div class="hero__stat">
-              <div class="hero__stat-num">R$1M<span style="color:var(--orange-xl)">+</span></div>
-              <div class="hero__stat-label">Em ads gerenciados</div>
-            </div>
-            <div class="hero__stat">
-              <div class="hero__stat-num">98<span style="color:var(--orange-xl)">%</span></div>
-              <div class="hero__stat-label">Satisfação dos clientes</div>
-            </div>
-            <div class="hero__stat">
-              <div class="hero__stat-num">3<span style="color:var(--orange-xl)">x</span></div>
-              <div class="hero__stat-label">Retorno médio em ads</div>
-            </div>
+          <div class="hfeat-card hfeat-card--active">
+            <i class="fa-solid fa-chart-line hfeat-card__icon"></i>
+            <div class="hfeat-card__name">SEO & Growth</div>
+            <div class="hfeat-card__dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="hfeat-card">
+            <i class="fa-solid fa-store hfeat-card__icon"></i>
+            <div class="hfeat-card__name">E-Commerce</div>
+            <div class="hfeat-card__dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="hfeat-card">
+            <i class="fa-solid fa-headset hfeat-card__icon"></i>
+            <div class="hfeat-card__name">Suporte Direto</div>
+            <div class="hfeat-card__dots"><span></span><span></span><span></span></div>
           </div>
         </div>
 
-        <div class="hero__visual reveal reveal--delay-2">
-          <div class="hero__dashboard">
-            <div class="dash__float dash__float--1">
-              <div class="dash__float-icon"><i class="fa-solid fa-chart-line"></i></div>
-              <div class="dash__float-text">
-                <strong>ROAS 8.4×</strong>
-                <span>Campanha ativa</span>
-              </div>
-            </div>
-
-            <div class="dash__card">
-              <div class="dash__header">
-                <span class="dash__title">Performance Dashboard</span>
-                <span class="dash__badge">Ao vivo</span>
-              </div>
-              <div class="dash__metrics">
-                <div class="dash__metric">
-                  <div class="dash__metric-label">Novos leads</div>
-                  <div class="dash__metric-value" id="liveLeads">2.847</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +34% este mês</div>
-                </div>
-                <div class="dash__metric">
-                  <div class="dash__metric-label">Conversão</div>
-                  <div class="dash__metric-value" id="liveConv">4.7%</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +1.2pp</div>
-                </div>
-                <div class="dash__metric">
-                  <div class="dash__metric-label">Custo / lead</div>
-                  <div class="dash__metric-value" id="liveCpl">R$12</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-down"></i> −28%</div>
-                </div>
-                <div class="dash__metric">
-                  <div class="dash__metric-label">PageSpeed</div>
-                  <div class="dash__metric-value" id="livePs">98</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-circle-check"></i> Excelente</div>
-                </div>
-              </div>
-              <div class="dash__bar-wrap">
-                <div class="dash__bar-label">
-                  <span>Receita gerada</span>
-                  <span>84% da meta</span>
-                </div>
-                <div class="dash__bar">
-                  <div class="dash__bar-fill" data-width="84"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="dash__float dash__float--2">
-              <div class="dash__float-icon"><i class="fa-solid fa-bolt"></i></div>
-              <div class="dash__float-text">
-                <strong>Automação ativa</strong>
-                <span>0 tarefas manuais</span>
-              </div>
-            </div>
+        <!-- Stats Bar -->
+        <div class="hero-v2__statsbar reveal">
+          <div class="sbar__stat">
+            <strong>80+</strong>
+            <span>Projetos entregues</span>
           </div>
+          <div class="sbar__div"></div>
+          <div class="sbar__stat">
+            <strong>98%</strong>
+            <span>Satisfação dos clientes</span>
+          </div>
+          <div class="sbar__div"></div>
+          <div class="sbar__stat">
+            <strong>R$1M+</strong>
+            <span>Em ads gerenciados</span>
+          </div>
+          <a href="/contato" class="btn btn--primary sbar__cta">
+            Diagnóstico Grátis <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
+
+        <!-- Tagline Strip -->
+        <div class="hero-v2__tagline reveal">
+          <span class="tagline__line"></span>
+          Estratégia &nbsp;·&nbsp; Performance &nbsp;·&nbsp; Conversão &nbsp;·&nbsp; Resultado
+          <span class="tagline__line"></span>
+        </div>
+
       </div>
     </div>
   </section>
@@ -265,7 +305,7 @@
   <!-- ════════════════════════════════════
        SERVIÇOS
   ════════════════════════════════════ -->
-  <section class="services section" style="background: rgba(13,16,24,.6); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06);">
+  <section class="services section" style="background: rgba(26,7,6,.5); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div class="section__head reveal">
         <span class="label"><i class="fa-solid fa-layer-group"></i> O que fazemos</span>
@@ -465,7 +505,7 @@
   <!-- ════════════════════════════════════
        DEPOIMENTOS
   ════════════════════════════════════ -->
-  <section class="testimonials section" style="background: rgba(13,16,24,.5); border-top: 1px solid rgba(255,255,255,.06);">
+  <section class="testimonials section" style="background: rgba(26,7,6,.4); border-top: 1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div class="section__head reveal">
         <span class="label"><i class="fa-solid fa-quote-left"></i> Depoimentos</span>
