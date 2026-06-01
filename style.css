@@ -253,9 +253,8 @@ p { color: var(--gray-400); line-height: 1.7; }
   letter-spacing: -.02em;
 }
 .logo-icon {
-  height: 36px;
-  width: auto;
-  max-width: 120px;
+  height: 32px;
+  width: 32px;
   flex-shrink: 0;
   border-radius: 0;
   object-fit: contain;
