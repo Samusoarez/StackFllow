@@ -165,6 +165,8 @@
 
         <div class="hero__visual reveal reveal--delay-2">
           <div class="hero__dashboard">
+
+            <!-- Floating badges -->
             <div class="dash__float dash__float--1">
               <div class="dash__float-icon"><i class="fa-solid fa-chart-line"></i></div>
               <div class="dash__float-text">
@@ -172,43 +174,72 @@
                 <span>Campanha ativa</span>
               </div>
             </div>
-            <div class="dash__card">
-              <div class="dash__header">
-                <span class="dash__title">Performance Dashboard</span>
-                <span class="dash__badge">Ao vivo</span>
+
+            <!-- LAPTOP MOCKUP -->
+            <div class="laptop">
+              <div class="laptop__screen">
+                <div class="laptop__bezel">
+                  <div class="laptop__camera"></div>
+                  <div class="laptop__display">
+                    <!-- browser bar -->
+                    <div class="laptop__browser-bar">
+                      <div class="laptop__traffic-lights">
+                        <span style="background:#f74603"></span>
+                        <span style="background:#dd0200"></span>
+                        <span style="background:#55100d"></span>
+                      </div>
+                      <div class="laptop__url-bar">stackfllow.com.br — Dashboard</div>
+                    </div>
+                    <!-- dashboard content -->
+                    <div class="dash__card">
+                      <div class="dash__header">
+                        <span class="dash__title">Performance Dashboard</span>
+                        <span class="dash__badge">Ao vivo</span>
+                      </div>
+                      <div class="dash__metrics">
+                        <div class="dash__metric">
+                          <div class="dash__metric-label">Novos leads</div>
+                          <div class="dash__metric-value" id="liveLeads">2.847</div>
+                          <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +34% este mês</div>
+                        </div>
+                        <div class="dash__metric">
+                          <div class="dash__metric-label">Conversão</div>
+                          <div class="dash__metric-value" id="liveConv">4.7%</div>
+                          <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +1.2pp</div>
+                        </div>
+                        <div class="dash__metric">
+                          <div class="dash__metric-label">Custo / lead</div>
+                          <div class="dash__metric-value" id="liveCpl">R$11</div>
+                          <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-down"></i> −32%</div>
+                        </div>
+                        <div class="dash__metric">
+                          <div class="dash__metric-label">PageSpeed</div>
+                          <div class="dash__metric-value">98</div>
+                          <div class="dash__metric-delta up"><i class="fa-solid fa-circle-check"></i> Excelente</div>
+                        </div>
+                      </div>
+                      <div class="dash__bar-wrap">
+                        <div class="dash__bar-label">
+                          <span>Receita gerada</span>
+                          <span>84% da meta</span>
+                        </div>
+                        <div class="dash__bar">
+                          <div class="dash__bar-fill" data-width="84"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="dash__metrics">
-                <div class="dash__metric">
-                  <div class="dash__metric-label">Novos leads</div>
-                  <div class="dash__metric-value" id="liveLeads">2.847</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +34% este mês</div>
+              <div class="laptop__hinge"></div>
+              <div class="laptop__base">
+                <div class="laptop__keyboard">
+                  <div class="laptop__keys"></div>
                 </div>
-                <div class="dash__metric">
-                  <div class="dash__metric-label">Conversão</div>
-                  <div class="dash__metric-value" id="liveConv">4.7%</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-up"></i> +1.2pp</div>
-                </div>
-                <div class="dash__metric">
-                  <div class="dash__metric-label">Custo / lead</div>
-                  <div class="dash__metric-value" id="liveCpl">R$11</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-arrow-trend-down"></i> −32%</div>
-                </div>
-                <div class="dash__metric">
-                  <div class="dash__metric-label">PageSpeed</div>
-                  <div class="dash__metric-value">98</div>
-                  <div class="dash__metric-delta up"><i class="fa-solid fa-circle-check"></i> Excelente</div>
-                </div>
-              </div>
-              <div class="dash__bar-wrap">
-                <div class="dash__bar-label">
-                  <span>Receita gerada</span>
-                  <span>84% da meta</span>
-                </div>
-                <div class="dash__bar">
-                  <div class="dash__bar-fill" data-width="84"></div>
-                </div>
+                <div class="laptop__trackpad"></div>
               </div>
             </div>
+
             <div class="dash__float dash__float--2">
               <div class="dash__float-icon"><i class="fa-solid fa-bolt"></i></div>
               <div class="dash__float-text">
