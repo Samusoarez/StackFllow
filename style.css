@@ -2322,7 +2322,7 @@ p { color: var(--gray-400); line-height: 1.7; }
 
 .tech-item__tag {
   font-size: .68rem;
-  color: var(--gray-600);
+  color: var(--gray-200);
   margin-top: 3px;
   display: block;
 }
